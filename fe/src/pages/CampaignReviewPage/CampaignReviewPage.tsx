@@ -1,3 +1,5 @@
+import { Campaign } from "../../shared-components/Campaign/Campaign";
+
 export const CampaignReviewPage = () => {
-  return <div>review</div>;
+  return <Campaign />;
 };

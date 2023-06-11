@@ -1,9 +1,11 @@
 import { S } from "./styled";
+// @ts-ignore
+import { ReactComponent as Logo } from "../../assets/logo.svg";
 
 export const Header = () => {
   return (
     <S.Entry>
-      <S.Logo>Campaign</S.Logo>
+      <S.Logo><Logo /></S.Logo>
       <S.RightSideMover />
       <S.Organization>
         <S.OrganizationAvatar>
@@ -11,7 +13,7 @@ export const Header = () => {
             src={"https://thumbs.dreamstime.com/b/cute-cat-portrait-square-photo-beautiful-white-closeup-105311158.jpg"}
           />
         </S.OrganizationAvatar>
-        <S.OrganizationName>Someone Crew</S.OrganizationName>
+        <S.OrganizationName>Girls Crew</S.OrganizationName>
       </S.Organization>
       <S.UserAvatar>
         <img

@@ -2,10 +2,14 @@ import styled from "styled-components";
 
 export namespace S {
   export const Entry = styled.div`
+    position: sticky;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
-    padding: 20px 15px;
-    border-bottom: 1px solid;
+    padding: 26px 40px;
+    border-bottom: 1px solid #352B42;
+    background: #131316;
   `;
 
   export const Logo = styled.div``;
@@ -15,12 +19,17 @@ export namespace S {
   `;
 
   export const Organization = styled.div`
-    margin-right: 20px;
     display: flex;
     align-items: center;
     column-gap: 10px;
-    padding: 5px 8px;
-    border: 1px solid;
+
+    margin-right: 20px;
+    padding: 10px 16px;
+    
+    border: 1px solid #352b42;
+    border-radius: 8px;
+    
+    box-sizing: content-box;
   `;
 
   export const OrganizationAvatar = styled.div`
@@ -36,7 +45,12 @@ export namespace S {
     }
   `;
 
-  export const OrganizationName = styled.div``;
+  export const OrganizationName = styled.div`
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1;
+    color: #6096FF;
+  `;
 
   export const UserAvatar = styled.div`
     width: 30px;

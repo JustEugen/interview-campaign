@@ -22,7 +22,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "craco start start",
+    "start": "craco start",
     "build": "craco start build"
   },
   "proxy": "http://localhost:3007",

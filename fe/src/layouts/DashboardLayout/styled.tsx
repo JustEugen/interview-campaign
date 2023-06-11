@@ -13,12 +13,12 @@ export namespace S {
     flex-grow: 2;
 
     ${DashboardSideBar.S.Entry} {
-      width: 200px;
+      width: 290px;
     }
   `;
 
   export const PageContent = styled.div`
-    padding: 30px 15px;
+    padding: 40px 34px;
     flex-grow: 2;
   `;
 }

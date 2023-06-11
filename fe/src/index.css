@@ -4,6 +4,8 @@ body {
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: #131316;
 }
 
 code {
@@ -12,4 +14,5 @@ code {
 
 * {
   box-sizing: border-box;
+  font-family: "Inter";
 }

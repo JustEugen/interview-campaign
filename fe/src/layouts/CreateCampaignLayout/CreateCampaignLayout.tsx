@@ -6,8 +6,10 @@ import { CampaignActionsPage } from "../../pages/CampaignActionsPage/CampaignAct
 import { CampaignRewardsPage } from "../../pages/CampaignRewardsPage/CampaignRewardsPage";
 import { CampaignReviewPage } from "../../pages/CampaignReviewPage/CampaignReviewPage";
 import { Button } from "../../shared-components/Button/Button";
+import { CreateCampaignSideBar } from "./componenets/CreateCampaignSideBar/CreateCampaignSideBar";
+import { PageTitle } from "../../shared-components/PageTitle/PageTitle";
 
-enum Step {
+export enum Step {
   Details = "Details",
   Actions = "Actions",
   Rewards = "Rewards",
@@ -72,23 +74,14 @@ export const CreateCampaignLayout = () => {
         name={prevStep ? "Back to " + prevStep.titleText : "Create a Campaign"}
       />
       <S.LayoutContent>
-        <S.Header>
-          <S.HeaderTitle>{stepContentMapper[currentStep].titleText}</S.HeaderTitle>
-          {currentStep === Step.Review ? (
-            <Button
-              onClick={() => {
-                alert("Publish");
-              }}
-            >
+        <CreateCampaignSideBar activeItem={currentStep} />
+        <S.Content>
+          <S.Header>
+            <PageTitle title={stepContentMapper[currentStep].titleText} />
+            <Button asLink={currentStep !== Step.Review ? { to: stepContentMapper[currentStep].nextLink } : undefined}>
               {stepContentMapper[currentStep].buttonText}
             </Button>
-          ) : (
-            <Link to={stepContentMapper[currentStep].nextLink}>
-              <Button>{stepContentMapper[currentStep].buttonText}</Button>
-            </Link>
-          )}
-        </S.Header>
-        <S.Content>
+          </S.Header>
           <Routes>
             <Route path={""} element={<Navigate to={"details"} />} />
             <Route path={"details"} element={<CampaignDetailsPage />} />
